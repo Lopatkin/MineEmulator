@@ -1,7 +1,11 @@
 package com.company.vizor101;
 
 
+import java.util.Arrays;
+
 public class Main {
+    static Mines[] mines = new Mines[100];
+
 
     public static int Balance;
     public static int mineCount;
@@ -42,6 +46,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+
+        for (int i = 0; i < mines.length; i++) {
+            mines[i] = new Mines(i, "Дерево", "Шахта", 0);
+        }
+
 
         Balance = 100;
         headLevel = 1;
